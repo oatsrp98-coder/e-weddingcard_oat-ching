@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3eee5">
+  <meta name="description" content="ด้วยรักและคำเชิญ — เบญจพร และ ดิศดนัย · 20 ธันวาคม 2569">
+  <title>เบญจพร & ดิศดนัย — คำเชิญจากใจ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/envelope-web.jpg" as="image">
+  <link rel="preload" href="assets/card-front.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="invitation" id="invitation" data-state="closed">
+    <header class="heading">
+      <p class="eyebrow">A LITTLE ENVELOPE, A LOT OF LOVE</p>
+      <h1>ด้วยรักและคำเชิญ</h1>
+      <p class="names">เบญจพร <span>&</span> ดิศดนัย</p>
+    </header>
+
+    <section class="scene" id="scene" aria-label="ซองและการ์ดเชิญงานแต่งงาน">
+      <div class="envelope" id="envelope" aria-hidden="true">
+        <div class="envelope-back paper"></div>
+        <div class="envelope-lining"></div>
+        <div class="flap"><div class="flap-front paper"></div><div class="flap-back paper"></div></div>
+      </div>
+      <div class="envelope envelope-front-layer" aria-hidden="true">
+        <div class="pocket paper"><div class="fold-left"></div><div class="fold-right"></div></div>
+        <div class="sealed-art"></div>
+      </div>
+
+      <div class="card-flight" id="cardFlight" inert aria-hidden="true">
+        <button class="card" id="card" type="button" aria-label="พลิกการ์ดเพื่อดูด้านหลัง" aria-describedby="cardHint">
+          <span class="card-face card-front"><img src="assets/card-front.jpg" width="1462" height="2048" alt="การ์ดด้านหน้า เบญจพรและดิศดนัย วันที่ 20 ธันวาคม 2569" draggable="false"></span>
+          <span class="card-face card-back"><img src="assets/card-back.jpg" width="1462" height="2048" alt="การ์ดด้านหลัง รายละเอียดและกำหนดการงานแต่งงาน พร้อมคิวอาร์โค้ดสถานที่จัดงาน" draggable="false"></span>
+        </button>
+      </div>
+
+      <button class="open-envelope" id="openEnvelope" type="button" aria-label="เปิดซองจดหมายเพื่อดูการ์ดเชิญ"></button>
+    </section>
+
+    <footer class="controls-area">
+      <div class="closed-hint" id="closedHint"><span class="hint-line"></span><p>แตะที่ซอง เพื่อเปิดคำเชิญของเรา</p><span class="hint-line"></span></div>
+      <div class="card-controls" id="cardControls" hidden>
+        <p class="card-hint" id="cardHint">แตะการ์ดเพื่อพลิกดูอีกด้าน</p>
+        <div class="toolbar">
+          <button type="button" id="flipButton" class="control primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 3v5h-5M20 15A8 8 0 0 1 6 18l-2-2M4 21v-5h5"/></svg><span id="flipLabel">ดูด้านหลัง</span></button>
+          <button type="button" id="zoomButton" class="control"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6M10 7v6"/></svg>ขยายดู</button>
+          <button type="button" id="resetButton" class="control icon-only" aria-label="เก็บการ์ดและเปิดซองใหม่" title="เปิดซองใหม่"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2 7M3 4v7h7"/></svg></button>
+        </div>
+        <p class="side-indicator" id="sideIndicator" aria-hidden="true"><span class="dot active"></span><span class="dot"></span><span id="sideName">ด้านหน้า</span></p>
+      </div>
+      <p class="date-line">20 DECEMBER 2026 <span>·</span> CHIANG MAI</p>
+    </footer>
+    <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+    <noscript><p class="noscript">เปิดดูการ์ดได้ที่ <a href="assets/card-front.jpg">ด้านหน้า</a> และ <a href="assets/card-back.jpg">ด้านหลัง</a></p></noscript>
+  </main>
+
+  <dialog id="imageViewer" class="image-viewer" aria-label="ดูการ์ดขนาดใหญ่">
+    <div class="viewer-toolbar"><p id="viewerTitle">การ์ดด้านหน้า</p><div><button id="viewerFlip" type="button">พลิกการ์ด</button><a id="originalLink" href="assets/card-front.jpg" target="_blank" rel="noopener">เปิดภาพต้นฉบับ ↗</a><button id="closeViewer" type="button" aria-label="ปิดภาพขยาย">ปิด ×</button></div></div>
+    <div class="viewer-scroll"><img id="zoomImage" src="assets/card-front.jpg" width="1462" height="2048" alt="ภาพต้นฉบับของการ์ดด้านหน้า"></div>
+  </dialog>
+</body>
+</html>
