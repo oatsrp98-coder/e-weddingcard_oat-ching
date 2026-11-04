@@ -22,3 +22,7 @@ Import this repository, select the **Other** framework preset, leave the build c
 - `assets/`: original two card images and approved envelope
 
 Use the original image links in the enlarged viewer to access the source JPEGs without any resampling.
+
+## Photo gallery
+
+Five supplied wedding photos appear below the invitation in a responsive gallery. Their original JPEG bytes and complete compositions are retained. Tap a photo to open a separate full-screen viewer; use previous/next, left/right keys, or a horizontal swipe to browse all five. Escape or Close returns focus to the selected photo. Original-image links remain available, and the gallery links also work without JavaScript. Photos load lazily so the envelope opens first.

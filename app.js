@@ -26,7 +26,7 @@
     $('flipLabel').textContent = back ? 'ดูด้านหน้า' : 'ดูด้านหลัง';
     $('sideName').textContent = back ? 'ด้านหลัง' : 'ด้านหน้า';
     card.setAttribute('aria-label', back ? 'พลิกการ์ดเพื่อดูด้านหน้า' : 'พลิกการ์ดเพื่อดูด้านหลัง');
-    document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === Number(back)));
+    document.querySelectorAll('#sideIndicator .dot').forEach((dot, i) => dot.classList.toggle('active', i === Number(back)));
     document.querySelector('.card-front').setAttribute('aria-hidden', String(back));
     document.querySelector('.card-back').setAttribute('aria-hidden', String(!back));
   }
@@ -58,7 +58,7 @@
     flight.setAttribute('aria-hidden', 'false');
     opening = false;
     $('status').textContent = 'เปิดการ์ดแล้ว แตะการ์ดเพื่อพลิกดูอีกด้าน หรือกดขยายดูเพื่ออ่านข้อความ';
-    card.focus({ preventScroll: true });
+    if (!$('photoViewer').open) card.focus({ preventScroll: true });
   }
   async function flipCard() {
     if (opening || flipping || invitation.dataset.state !== 'open') return;
@@ -107,7 +107,7 @@
   $('closeViewer').addEventListener('click', () => viewer.close());
   viewer.addEventListener('close', () => focusBeforeViewer?.focus());
   document.addEventListener('keydown', event => {
-    if (viewer.open || invitation.dataset.state !== 'open' || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (viewer.open || $('photoViewer').open || invitation.dataset.state !== 'open' || event.altKey || event.ctrlKey || event.metaKey) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); flipCard(); }
   });
   window.addEventListener('resize', () => { if (invitation.dataset.state === 'closed') fitCard(); });

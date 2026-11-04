@@ -13,7 +13,8 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <main class="invitation" id="invitation" data-state="closed">
+  <main>
+  <div class="invitation" id="invitation" data-state="closed">
     <header class="heading">
       <p class="eyebrow">A LITTLE ENVELOPE, A LOT OF LOVE</p>
       <h1>ด้วยรักและคำเชิญ</h1>
@@ -56,11 +57,61 @@
     </footer>
     <p class="sr-only" id="status" role="status" aria-live="polite"></p>
     <noscript><p class="noscript">เปิดดูการ์ดได้ที่ <a href="assets/card-front.jpg">ด้านหน้า</a> และ <a href="assets/card-back.jpg">ด้านหลัง</a></p></noscript>
+  </div>
+
+  <section class="memories" id="memories" aria-labelledby="memoriesTitle">
+    <header class="memories-heading">
+      <span class="memories-rule" aria-hidden="true"></span>
+      <p class="eyebrow">MOMENTS OF US</p>
+      <h2 id="memoriesTitle">เรื่องราวของเราในภาพ</h2>
+      <p>รอยยิ้ม ความรัก และช่วงเวลาที่อยากเก็บไว้ด้วยกัน</p>
+    </header>
+    <div class="gallery-grid">
+      <a class="gallery-photo" href="assets/gallery/photo-01.jpg" aria-label="ขยายภาพคู่บ่าวสาวกับสุนัขในสวน">
+        <img src="assets/gallery/photo-01.jpg" width="1365" height="2048" alt="คู่บ่าวสาวนั่งในสวนพร้อมสุนัขใต้แสงแดดอุ่น" loading="lazy" decoding="async">
+        <span class="photo-zoom" aria-hidden="true">ดูภาพเต็ม ↗</span>
+      </a>
+      <a class="gallery-photo" href="assets/gallery/photo-02.jpg" aria-label="ขยายภาพรอยยิ้มของคู่บ่าวสาว">
+        <img src="assets/gallery/photo-02.jpg" width="1365" height="2048" alt="คู่บ่าวสาวยิ้มใกล้กันพร้อมช่อดอกไม้สีขาว" loading="lazy" decoding="async">
+        <span class="photo-zoom" aria-hidden="true">ดูภาพเต็ม ↗</span>
+      </a>
+      <a class="gallery-photo" href="assets/gallery/photo-04.jpg" aria-label="ขยายภาพคู่บ่าวสาวจับมือกันในสวน">
+        <img src="assets/gallery/photo-04.jpg" width="1365" height="2048" alt="คู่บ่าวสาวจับมือและหัวเราะด้วยกันในสวน" loading="lazy" decoding="async">
+        <span class="photo-zoom" aria-hidden="true">ดูภาพเต็ม ↗</span>
+      </a>
+      <a class="gallery-photo gallery-square" href="assets/gallery/photo-03.jpg" aria-label="ขยายภาพคอลลาจแหวนและการจับมือ">
+        <img src="assets/gallery/photo-03.jpg" width="2048" height="2048" alt="ภาพคอลลาจแหวนแต่งงาน มือที่จับกัน และเจ้าบ่าวจูบมือเจ้าสาว" loading="lazy" decoding="async">
+        <span class="photo-zoom" aria-hidden="true">ดูภาพเต็ม ↗</span>
+      </a>
+      <a class="gallery-photo gallery-square" href="assets/gallery/photo-05.jpg" aria-label="ขยายภาพคู่บ่าวสาวใต้ผ้าคลุมหน้า">
+        <img src="assets/gallery/photo-05.jpg" width="2048" height="2048" alt="ภาพคอลลาจคู่บ่าวสาวแนบหน้าผากกันใต้ผ้าคลุมหน้าในแสงอุ่น" loading="lazy" decoding="async">
+        <span class="photo-zoom" aria-hidden="true">ดูภาพเต็ม ↗</span>
+      </a>
+    </div>
+    <p class="gallery-caption">แตะภาพเพื่อดูเต็มจอ · เลื่อนดูได้ทั้ง 5 ภาพ</p>
+    <p class="memories-signature">With love, <span>Oat & Ching</span></p>
+  </section>
   </main>
 
   <dialog id="imageViewer" class="image-viewer" aria-label="ดูการ์ดขนาดใหญ่">
     <div class="viewer-toolbar"><p id="viewerTitle">การ์ดด้านหน้า</p><div><button id="viewerFlip" type="button">พลิกการ์ด</button><a id="originalLink" href="assets/card-front.jpg" target="_blank" rel="noopener">เปิดภาพต้นฉบับ ↗</a><button id="closeViewer" type="button" aria-label="ปิดภาพขยาย">ปิด ×</button></div></div>
     <div class="viewer-scroll"><img id="zoomImage" src="assets/card-front.jpg" width="1462" height="2048" alt="ภาพต้นฉบับของการ์ดด้านหน้า"></div>
   </dialog>
+
+  <dialog id="photoViewer" class="photo-viewer" aria-label="แกลเลอรีภาพคู่บ่าวสาว">
+    <div class="photo-toolbar">
+      <p>ช่วงเวลาของเรา <span id="photoCount" aria-live="polite">1 / 5</span></p>
+      <button id="closePhotoViewer" type="button" aria-label="ปิดแกลเลอรีภาพ">ปิด <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="photo-stage" id="photoStage">
+      <img id="fullPhoto" alt="" draggable="false">
+    </div>
+    <div class="photo-navigation">
+      <button type="button" id="previousPhoto" aria-label="ดูรูปก่อนหน้า">← <span>ก่อนหน้า</span></button>
+      <a id="photoOriginal" target="_blank" rel="noopener">เปิดภาพต้นฉบับ ↗</a>
+      <button type="button" id="nextPhoto" aria-label="ดูรูปถัดไป"><span>ถัดไป</span> →</button>
+    </div>
+  </dialog>
+  <script src="gallery.js" defer></script>
 </body>
 </html>
