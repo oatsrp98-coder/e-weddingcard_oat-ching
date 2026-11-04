@@ -36,3 +36,56 @@
 .photo-navigation a{font-size:11px;border-color:transparent;color:#cbd0be}
 body:has(.photo-viewer[open]){overflow:hidden}
 @media(max-width:700px){.memories{padding:48px 20px 44px}.memories-heading{margin-bottom:28px}.memories-heading>p:last-child{font-size:11px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gallery-photo{grid-column:span 1}.gallery-photo:first-child{grid-column:span 2;max-width:440px;width:100%;justify-self:center}.gallery-photo.gallery-square{grid-column:span 1}.photo-zoom{opacity:1;font-size:8px;bottom:8px;right:8px;padding:6px 8px}.gallery-caption{font-size:10px}.photo-toolbar{padding:12px 16px}.photo-stage{margin:0 10px}.photo-navigation{gap:5px;padding-left:8px;padding-right:8px}.photo-navigation button,.photo-navigation a{padding:10px 12px;font-size:10px}.photo-navigation a{font-size:9px}.memories-signature{margin-top:38px}}
+
+/* Refined Thai typography and invitation details. */
+:root{--font-body:"Sarabun","Thonburi","Tahoma",sans-serif;--font-display:"Noto Serif Thai","Thonburi",serif;--card-width:min(370px,calc(100vw - 48px),calc((100svh - 370px)*.7142857))}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:#4d5b45}
+.heading{width:min(100%,800px);flex-shrink:0}
+.heading h1{font-family:var(--font-display);font-size:clamp(19px,2.4vw,27px);font-weight:400;line-height:1.8;letter-spacing:0;margin:0}
+.heading h1>span{display:block}
+.heading .names{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);align-items:center;gap:14px;width:min(100%,640px);margin:20px auto 0;color:#47583c;letter-spacing:0}
+.person-name{margin:0;min-width:0;text-align:center}
+.heading .names .given-name,.heading .names .family-name{display:block;font-style:normal;font-family:var(--font-display);padding:0;color:inherit}
+.heading .names .given-name{font-size:clamp(29px,3.5vw,40px);line-height:1.5;font-weight:500}
+.heading .names .family-name{font-size:clamp(17px,2vw,21px);line-height:1.6;margin-top:2px;font-weight:400;color:#717b62}
+.wedding-rings{display:block;width:76px;height:56px;color:#ad8a49;justify-self:center}
+.scene{min-height:max(280px,calc(var(--env-width)*.7142857 + 24px),calc(var(--card-width)*1.4 + 32px));margin:24px 0}
+.closed-hint p,.card-hint{font-size:14px;line-height:1.7;color:#66725b}
+.control{font-size:14px;min-height:44px;padding:9px 17px}.control.icon-only{width:44px}.side-indicator{font-size:12px;line-height:1.5}
+.date-line{font-size:19px;line-height:1.8;font-family:var(--font-display);font-weight:500;letter-spacing:0;margin:22px 0 0;color:#556344}
+.date-line .venue-line{display:block;font:400 16px/1.8 var(--font-body);letter-spacing:0;padding:0;margin-top:2px;color:#6c745e}
+.memories-heading h2{font-family:var(--font-display);letter-spacing:0;line-height:1.6}
+.memories-heading .eyebrow,.eyebrow{font-family:var(--font-body);font-size:13px;letter-spacing:.02em;line-height:1.8}
+.memories-heading>p:last-child{font-size:16px;line-height:1.9}.gallery-caption{font-size:14px;line-height:1.7}.photo-zoom{font-size:12px}
+.viewer-toolbar p{font-size:15px}.viewer-toolbar button,.viewer-toolbar a,.photo-viewer button,.photo-viewer a{font-family:var(--font-body);font-size:14px;min-height:44px}
+.photo-toolbar p{font-size:15px}.photo-toolbar p span{font-size:14px}.photo-navigation a{font-size:13px}
+.section-rule{display:block;width:44px;height:1px;background:#ac925e88;margin:0 auto 28px}
+.gifts{padding:76px 24px 86px;background:#f9f6ef;border-top:1px solid #b8b19d35}
+.gift-intro{max-width:760px;margin:0 auto 36px;text-align:center}
+.gift-intro .eyebrow{color:#8b7955;margin:0 0 12px;font-size:14px;letter-spacing:0}
+.gift-intro h2{font:400 clamp(25px,3vw,33px)/1.6 var(--font-display);margin:0 0 18px;color:#4d5d40}
+.gift-message{font-size:17px;line-height:1.9;color:#69715f;margin:0;text-wrap:pretty}
+.gift-panel{display:grid;grid-template-columns:230px minmax(0,1fr);gap:42px;align-items:center;max-width:760px;margin:0 auto;padding:38px;background:#fffdf8;border:1px solid #c7b89066;border-radius:4px;box-shadow:0 10px 35px #645d3a06}
+.gift-qr-area{display:grid;place-items:center;min-width:0}
+.qr-placeholder{width:100%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;padding:22px 12px;background:#f4f1e8;border:1px dashed #b6a87888;text-align:center;color:#8d7951;border-radius:2px}
+.qr-placeholder svg{width:56px;height:56px;margin-bottom:4px}.qr-placeholder span{font-size:14px;line-height:1.7}.qr-placeholder small{font-size:12px;color:#8a8e7e}
+.gift-qr-image{display:block;width:100%;height:auto;max-width:260px;object-fit:contain}
+.qr-placeholder[hidden],.gift-qr-image[hidden],.gift-pending[hidden]{display:none}
+.gift-bank-heading{font:400 22px/1.5 var(--font-display);margin:0 0 20px;color:#556444}
+.bank-details{margin:0}.bank-details>div{padding:12px 0;border-bottom:1px solid #b8b19d3d}.bank-details>div:first-child{padding-top:0}
+.bank-details dt{font-size:13px;color:#808775;margin:0 0 4px}.bank-details dd{font-size:18px;font-weight:500;color:#46583c;margin:0;overflow-wrap:anywhere;line-height:1.7}.bank-details dd.awaiting-details{font-size:16px;font-weight:400;color:#8a8d7f}
+.gift-pending{font-size:12px;line-height:1.8;color:#8a8d7f;margin:18px 0 0}
+.thank-you{text-align:center;background:#e7ebdf;color:#50623f;padding:65px 24px 72px;border-top:1px solid #b8b19d35}
+.thank-you .section-rule{background:#9ba780;margin-bottom:24px}.thank-you p{font:400 clamp(21px,2.5vw,28px)/1.9 var(--font-display);margin:0 auto;max-width:850px;text-wrap:balance}.mobile-break{display:none}
+@media(min-height:900px){:root{--card-width:min(430px,calc(100vw - 48px),calc((100svh - 390px)*.7142857))}}
+@media(max-width:600px){
+ .invitation{padding:30px 18px 28px}.heading h1{font-size:19px;line-height:1.9}.heading .names{grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:7px;margin-top:17px}.heading .names .given-name{font-size:29px}.heading .names .family-name{font-size:17px}.wedding-rings{width:50px;height:42px}
+ .scene{margin:22px 0}.closed-hint{gap:9px}.closed-hint p,.card-hint{font-size:13px}.control{font-size:13px;padding:9px 14px}.date-line{font-size:18px;margin-top:19px}.date-line .venue-line{font-size:15px}
+ .memories-heading>p:last-child{font-size:15px}.gallery-caption{font-size:13px}.photo-zoom{font-size:11px}.viewer-toolbar button,.viewer-toolbar a,.photo-navigation button,.photo-navigation a{font-family:var(--font-body);font-size:12px}.photo-toolbar p{font-size:14px}
+ .gifts{padding:54px 20px 58px}.gift-message{font-size:16px}.desktop-break{display:none}.gift-panel{grid-template-columns:1fr;gap:28px;padding:28px 24px;max-width:430px}.gift-qr-area{max-width:210px;width:100%;justify-self:center}.gift-bank-heading{text-align:center;font-size:21px}.bank-details dt{font-size:14px}.bank-details dd.awaiting-details{font-size:16px}.gift-pending{text-align:center;font-size:13px}
+ .thank-you{padding:48px 20px 54px}.thank-you p{font-size:21px}.mobile-break{display:block}
+}
+@media(max-height:620px) and (orientation:landscape){
+ :root{--card-width:calc((100svh - 110px)*.7142857)}.invitation{padding:20px 16px}.heading h1{font-size:17px}.heading .names{grid-template-columns:1fr 40px 1fr;gap:4px;margin-top:10px}.heading .names .given-name{font-size:25px}.heading .names .family-name{font-size:15px}.wedding-rings{width:40px}.scene{height:calc(100svh - 48px);min-height:200px;margin:0}.date-line{font-size:17px;margin-top:14px}.date-line .venue-line{font-size:14px}.closed-hint p{font-size:12px}
+}
+@media(max-width:600px){.heading h1{font-size:clamp(17px,4.7vw,19px)}.heading .names .given-name{font-size:clamp(24px,7.3vw,29px);white-space:nowrap}}
