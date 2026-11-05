@@ -1,0 +1,25 @@
+{
+  "family": "Noto Serif Thai",
+  "license": "SIL Open Font License 1.1 (OFL.txt)",
+  "sourceCss": "https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;500;600&display=swap",
+  "files": [
+    {
+      "file": "noto-serif-thai-thai.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserifthai/v28/k3kHo80MPvpLmixYH7euCxWpSMu3-gcWGj0hHAKGvUQleOfz-VpL-DdULg.woff2",
+      "bytes": 32744,
+      "sha256": "a6e0d661ce53d7f1e7b873e9dd79e018148874f031b75fcd65eacda5a808da12"
+    },
+    {
+      "file": "noto-serif-thai-latin-ext.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserifthai/v28/k3kHo80MPvpLmixYH7euCxWpSMu3-gcWGj0hHAKGvUQleP3z-VpL-DdULg.woff2",
+      "bytes": 19112,
+      "sha256": "147da1b0294cc633191daca080613e9f7d3feff31ba1969d3f465d1bc0e8cca0"
+    },
+    {
+      "file": "noto-serif-thai-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserifthai/v28/k3kHo80MPvpLmixYH7euCxWpSMu3-gcWGj0hHAKGvUQlePPz-VpL-Dc.woff2",
+      "bytes": 36080,
+      "sha256": "1d75a0cb3bb76e6f59ba85bae7f31b33d5c8c020d33e1b499580957172a82f03"
+    }
+  ]
+}

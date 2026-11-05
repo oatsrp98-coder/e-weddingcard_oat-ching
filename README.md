@@ -4,7 +4,7 @@ A static, responsive wedding invitation with a laurel-green envelope, opening an
 
 The two supplied 1462 × 2048 JPEGs are copied byte-for-byte into `assets/card-front.jpg` and `assets/card-back.jpg`. CSS `object-fit: contain` preserves the complete original artwork without cropping, retouching, or re-encoding. Their near-5:7 ratio is fitted within an exact 5:7 card. The interface scales for screens; 5 × 7 inches describes the card proportions, not guaranteed physical display size. At 5 × 7 inches, source resolution is approximately 292 ppi.
 
-`assets/envelope-web.jpg` is a high-quality web copy of the approved envelope design. The original card JPEGs remain untouched. The closed envelope shows that image; layered paper surfaces animate the flap and card. The site supports keyboard controls, reduced motion, native dialog focus handling, and full-resolution image viewing. There are no third-party scripts, analytics, or runtime dependencies. LilyUPC is the first-choice font for all live text; Sarabun is loaded from Google Fonts as a fallback.
+`assets/envelope-web.jpg` is a high-quality web copy of the approved envelope design. The original card JPEGs remain untouched. The closed envelope shows that image; layered paper surfaces animate the flap and card. The site supports keyboard controls, reduced motion, native dialog focus handling, and full-resolution image viewing. There are no third-party scripts, analytics, or runtime dependencies. Noto Serif Thai is self-hosted for all live text, with no third-party font requests.
 
 ## Preview
 
@@ -33,8 +33,8 @@ Edit `gift-details.js` to set `qrImage`, `bankName`, `accountNumber`, and `accou
 
 ## Typography
 
-All live page text, including headings, names, dates, gift details, buttons, and image-viewer controls, uses the shared `--font-body` family: `"LilyUPC", "Lily UPC", "Sarabun", "Thonburi", "Tahoma", sans-serif`. Display text uses the same family.
+All live page text, including headings, names, dates, gift details, buttons, and image-viewer controls, uses **Noto Serif Thai**. Thai, Latin, and extended Latin WOFF2 subsets are served from `assets/fonts/`, so visitors do not need to install a font or contact an external font service. The Thai and Latin subsets are preloaded; `font-display: swap` keeps text visible while the font loads. The shared display and body font variables use the same family, with local Thai fonts as fallback if a font request fails.
 
-LilyUPC currently uses the font installed on the visitor's device. No LilyUPC font binary is hosted: a licensed webfont kit has not been supplied. Devices without LilyUPC display Sarabun or a local Thai fallback. To enable consistent LilyUPC rendering on all devices, add an appropriately licensed webfont kit and its supplied `@font-face` declaration; do not copy desktop font files into the public repository. See [Microsoft's font FAQ](https://learn.microsoft.com/en-us/typography/fonts/font-faq) and the [Lily UPC webfont license](https://www.myfonts.com/collections/lily-upc-font-microsoft-corporation/).
+The bundled font is distributed under the SIL Open Font License 1.1. Its copyright notice and full license are retained in `assets/fonts/OFL.txt`; official download sources and checksums are recorded in `assets/fonts/sources.json`. This replaces the earlier LilyUPC local-font setting following the couple's choice of a free webfont.
 
-Date and venue are displayed in Thai. Text baked into the original invitation JPEGs stays part of the original artwork and is not affected by CSS fonts.
+Date and venue are displayed in Thai. Text baked into the original invitation JPEGs stays part of the original artwork and is not affected by CSS fonts. Compact portrait screens retain a minimum readable card width and can scroll vertically; small secondary text uses darker colors for readability.
