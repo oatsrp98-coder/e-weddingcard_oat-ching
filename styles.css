@@ -156,8 +156,9 @@ body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:#4d5b45}
 @media(max-width:600px){.heading h1{font-size:clamp(17px,4.7vw,19px)}.heading .names .given-name{font-size:clamp(24px,7.3vw,29px);white-space:nowrap}}
 
 /* First names and realistic white-gold rings. */
+.invitation-intro{max-width:720px;margin:0 auto 16px;font:400 clamp(17px,1.8vw,21px)/1.9 var(--font-body);color:#66725b;text-wrap:balance;overflow-wrap:break-word}
 .heading .names{grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr);gap:20px;width:min(100%,720px);margin:0 auto;line-height:1.6}
 .heading .names .given-name{font-size:clamp(30px,3.6vw,42px);font-weight:400;line-height:1.6;white-space:nowrap}
 .heading .wedding-rings{display:block;width:124px;height:auto;object-fit:contain;justify-self:center;filter:drop-shadow(0 2px 2px #575e4c18)}
-@media(max-width:600px){.heading .names{grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);gap:8px}.heading .names .given-name{font-size:clamp(23px,7vw,29px)}.heading .wedding-rings{width:88px}}
-@media(max-height:620px) and (orientation:landscape){.heading .names{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:5px}.heading .names .given-name{font-size:clamp(19px,3vw,25px)}.heading .wedding-rings{width:64px}}
+@media(max-width:600px){.invitation-intro{max-width:360px;margin-bottom:14px;font-size:16px;line-height:1.85}.heading .names{grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);gap:8px}.heading .names .given-name{font-size:clamp(23px,7vw,29px)}.heading .wedding-rings{width:88px}}
+@media(max-height:620px) and (orientation:landscape){.invitation-intro{margin-bottom:12px;font-size:15px;line-height:1.8}.heading .names{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:5px}.heading .names .given-name{font-size:clamp(19px,3vw,25px)}.heading .wedding-rings{width:64px}}
