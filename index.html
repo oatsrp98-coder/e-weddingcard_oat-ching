@@ -9,10 +9,11 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/envelope-web.jpg" as="image">
   <link rel="preload" href="assets/card-front.jpg" as="image">
-  <link rel="preload" href="assets/fonts/noto-serif-thai-thai.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/noto-serif-thai-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="preload" href="assets/fonts/prompt/prompt-thai-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/prompt/prompt-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=007f723401">
+  <link rel="stylesheet" href="envelope.css?v=df07c7f1a1">
+  <script src="app.js?v=b9506e3d5e" defer></script>
   <script src="gift-details.js" defer></script>
   <script src="gifts.js" defer></script>
 </head>
@@ -20,17 +21,11 @@
   <main>
   <div class="invitation" id="invitation" data-state="closed">
     <header class="heading">
-      <h1><span>ขอเรียนเชิญท่านร่วมเป็นสักขีพยาน</span><span>ในพิธีมงคลสมรส</span></h1>
-      <div class="names" aria-label="เบญจพร ทะสุใจ และ ดิศดนัย สาระวรรณ">
-        <p class="person-name"><span class="given-name">เบญจพร</span><span class="family-name">ทะสุใจ</span></p>
-        <svg class="wedding-rings" viewBox="0 0 80 56" fill="none" aria-hidden="true" focusable="false">
-          <ellipse cx="28" cy="29" rx="17" ry="20" transform="rotate(-28 28 29)" stroke="currentColor" stroke-width="2.2"/>
-          <ellipse cx="51" cy="29" rx="17" ry="20" transform="rotate(28 51 29)" stroke="currentColor" stroke-width="2.2"/>
-          <path d="M39.2 17.5c2.5 3.1 4 6.8 4.5 10.6" stroke="#f8f4ec" stroke-width="5.5"/>
-          <path d="M39.2 17.5c2.5 3.1 4 6.8 4.5 10.6" stroke="currentColor" stroke-width="2.2"/>
-        </svg>
-        <p class="person-name"><span class="given-name">ดิศดนัย</span><span class="family-name">สาระวรรณ</span></p>
-      </div>
+      <h1 class="names" aria-label="เบญจพร และ ดิศดนัย">
+        <span class="person-name given-name">เบญจพร</span>
+        <img class="wedding-rings" src="assets/wedding-rings-white-gold.png" width="700" height="358" alt="" draggable="false">
+        <span class="person-name given-name">ดิศดนัย</span>
+      </h1>
     </header>
 
     <section class="scene" id="scene" aria-label="ซองและการ์ดเชิญงานแต่งงาน">
@@ -51,11 +46,25 @@
         </button>
       </div>
 
-      <button class="open-envelope" id="openEnvelope" type="button" aria-label="เปิดซองจดหมายเพื่อดูการ์ดเชิญ"></button>
+      <button class="closed-envelope" id="envelopeTurn" type="button" aria-label="เปิดคำเชิญจากด้านผนึกของซอง" aria-describedby="envelopeHint envelopeSide">
+        <span class="closed-envelope-rotor" id="envelopeRotor" aria-hidden="true">
+          <span class="closed-envelope-face closed-envelope-front"></span>
+          <span class="closed-envelope-face closed-envelope-back paper">
+            <img class="envelope-label" src="assets/envelope-label.png" width="1180" height="413" alt="" draggable="false">
+          </span>
+        </span>
+      </button>
     </section>
 
     <footer class="controls-area">
-      <div class="closed-hint" id="closedHint"><span class="hint-line"></span><p>แตะที่ซอง เพื่อเปิดคำเชิญของเรา</p><span class="hint-line"></span></div>
+      <div class="closed-controls" id="closedControls">
+        <div class="closed-hint" id="closedHint"><span class="hint-line"></span><p id="envelopeHint">ลากซองซ้าย–ขวาเพื่อพลิกดูทั้งสองด้าน</p><span class="hint-line"></span></div>
+        <div class="envelope-toolbar">
+          <button class="control" id="envelopeFlipButton" type="button" aria-pressed="false" aria-label="พลิกซองไปด้านเรียบ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 3v5h-5M20 15A8 8 0 0 1 6 18l-2-2M4 21v-5h5"/></svg>พลิกซอง</button>
+          <button class="control primary" id="openEnvelope" type="button">เปิดคำเชิญ</button>
+        </div>
+        <p class="envelope-side" id="envelopeSide">ด้านผนึก</p>
+      </div>
       <div class="card-controls" id="cardControls" hidden>
         <p class="card-hint" id="cardHint">แตะการ์ดเพื่อพลิกดูอีกด้าน</p>
         <div class="toolbar">

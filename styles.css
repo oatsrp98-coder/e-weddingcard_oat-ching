@@ -1,32 +1,69 @@
-/* Noto Serif Thai, self-hosted under SIL OFL 1.1; see assets/fonts/OFL.txt. */
+/* Prompt loopless Thai, self-hosted under SIL OFL1.1: assets/fonts/prompt/OFL.txt. */
 @font-face {
-  font-family: 'Noto Serif Thai';
+  font-family: 'Prompt';
   font-style: normal;
-  font-weight: 400 600;
-  font-stretch: 100%;
+  font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/noto-serif-thai-thai.woff2) format('woff2');
+  src: url(assets/fonts/prompt/prompt-thai-400.woff2) format('woff2');
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 @font-face {
-  font-family: 'Noto Serif Thai';
+  font-family: 'Prompt';
   font-style: normal;
-  font-weight: 400 600;
-  font-stretch: 100%;
+  font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/noto-serif-thai-latin-ext.woff2) format('woff2');
+  src: url(assets/fonts/prompt/prompt-vietnamese-400.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/prompt/prompt-latin-ext-400.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
-  font-family: 'Noto Serif Thai';
+  font-family: 'Prompt';
   font-style: normal;
-  font-weight: 400 600;
-  font-stretch: 100%;
+  font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/noto-serif-thai-latin.woff2) format('woff2');
+  src: url(assets/fonts/prompt/prompt-latin-400.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-:root{--font-body:"Noto Serif Thai","Thonburi","Tahoma",serif;--font-display:var(--font-body);color-scheme:light;--ivory:#f3eee5;--ink:#53604d;--muted:#818575;--gold:#ae8b4e;--paper:#879170;--env-width:min(620px,calc(100vw - 44px));--card-width:min(370px,calc(100vw - 48px),calc((100svh - 240px)*.7142857));--rest-scale:1.12}
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/prompt/prompt-thai-500.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/prompt/prompt-vietnamese-500.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/prompt/prompt-latin-ext-500.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/prompt/prompt-latin-500.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root{--font-body:"Prompt","Thonburi","Tahoma",sans-serif;--font-display:var(--font-body);color-scheme:light;--ivory:#f3eee5;--ink:#53604d;--muted:#818575;--gold:#ae8b4e;--paper:#879170;--env-width:min(620px,calc(100vw - 44px));--card-width:min(370px,calc(100vw - 48px),calc((100svh - 240px)*.7142857));--rest-scale:1.12}
 *{box-sizing:border-box}html{min-height:100%;background:var(--ivory)}body{margin:0;color:var(--ink);font-family:var(--font-body);background:radial-gradient(ellipse at 50% 40%,#fffdf9 0%,#f3eee5 67%,#eae3d7 100%);min-height:100svh}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}button:disabled{cursor:wait}button{touch-action:manipulation}.invitation{min-height:100svh;max-width:1600px;margin:auto;display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:clamp(24px,4svh,46px) 20px 20px}.heading{text-align:center;z-index:15;pointer-events:none}.eyebrow{font-size:9px;letter-spacing:.25em;margin:0 0 13px;color:#8c887a}.heading h1{font-family:var(--font-display);font-size:clamp(22px,3.1vw,30px);font-weight:400;letter-spacing:.07em;margin:0 0 9px}.names{font-size:13px;letter-spacing:.06em;margin:0;color:#797c6e}.names span{font:italic 19px var(--font-display);padding:0 10px;color:var(--gold)}
 .scene{width:100%;flex:1;min-height:280px;position:relative;isolation:isolate;display:grid;place-items:center;perspective:1600px;margin:12px 0}.envelope{position:absolute;width:var(--env-width);aspect-ratio:7/5;left:50%;top:50%;transform:translate(-50%,-50%);transition:opacity .8s ease,transform 1.2s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 18px 16px #403b282a);pointer-events:none}.paper{background-color:var(--paper);background-image:linear-gradient(145deg,#eef0c40b,#27351913),url("assets/envelope-web.jpg");background-size:100% 100%,1000% 1000%;background-position:0 0,52% 16%}.envelope-front-layer{z-index:4}.envelope-back{position:absolute;inset:0;border-radius:2px;z-index:0}.envelope-lining{position:absolute;inset:1px;z-index:1;background:linear-gradient(180deg,#687052,#8d9576 58%,#838d6c);clip-path:polygon(0 0,100% 0,50% 83%)}.pocket{position:absolute;inset:0;z-index:4;clip-path:polygon(0 0,50% 80%,100% 0,100% 100%,0 100%);box-shadow:inset 0 -3px 8px #2f3b3320}.fold-left,.fold-right{position:absolute;inset:0;background:linear-gradient(130deg,#c2c99b1a,transparent 80%)}.fold-left{clip-path:polygon(0 0,51% 81%,0 100%)}.fold-right{clip-path:polygon(100% 0,49% 81%,100% 100%);background:linear-gradient(230deg,#19251113,transparent 80%)}.flap{position:absolute;inset:0;z-index:5;transform-style:preserve-3d;transform-origin:50% 0;transition:transform 1.05s cubic-bezier(.4,.05,.2,1);filter:drop-shadow(0 3px 2px #2c321e45)}.flap-front,.flap-back{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 82%);backface-visibility:hidden;-webkit-backface-visibility:hidden}.flap-back{transform:rotateY(180deg);background-image:linear-gradient(0deg,#1b281826,#f5f3db17),url("assets/envelope-web.jpg")}.sealed-art{position:absolute;inset:0;z-index:6;background-image:url("assets/envelope-web.jpg");background-size:111.44% 114.72%;background-position:50% 49.1%;border-radius:1px;transition:opacity .35s ease,transform .6s ease}.open-envelope{position:absolute;left:50%;top:50%;width:var(--env-width);aspect-ratio:7/5;transform:translate(-50%,-50%);z-index:12;border:0;border-radius:2px;background:transparent}.open-envelope:hover{background:#fff8e806}.open-envelope:focus-visible{outline-offset:10px}
 .card-flight{position:absolute;width:var(--card-width);aspect-ratio:5/7;left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg) scale(var(--rest-scale));opacity:0;z-index:2;transition:transform 1.3s cubic-bezier(.2,.6,.2,1),opacity .25s;perspective:1500px}.card{position:relative;width:100%;height:100%;display:block;background:none;border:0;padding:0;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.25,.55,.25,1);border-radius:2px;box-shadow:0 2px 3px #4c3c2320,0 20px 50px #4c3c2328}.card.is-back{transform:rotateY(180deg)}.card-face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#f6f0e3;border-radius:2px}.card-face img{width:100%;height:100%;object-fit:contain;display:block;user-select:none}.card-back{transform:rotateY(180deg)}
@@ -117,3 +154,10 @@ body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:#4d5b45}
  :root{--card-width:calc((100svh - 110px)*.7142857)}.invitation{padding:20px 16px}.heading h1{font-size:17px}.heading .names{grid-template-columns:1fr 40px 1fr;gap:4px;margin-top:10px}.heading .names .given-name{font-size:25px}.heading .names .family-name{font-size:15px}.wedding-rings{width:40px}.scene{height:calc(100svh - 48px);min-height:200px;margin:0}.date-line{font-size:17px;margin-top:14px}.date-line .venue-line{font-size:14px}.closed-hint p{font-size:12px}
 }
 @media(max-width:600px){.heading h1{font-size:clamp(17px,4.7vw,19px)}.heading .names .given-name{font-size:clamp(24px,7.3vw,29px);white-space:nowrap}}
+
+/* First names and realistic white-gold rings. */
+.heading .names{grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr);gap:20px;width:min(100%,720px);margin:0 auto;line-height:1.6}
+.heading .names .given-name{font-size:clamp(30px,3.6vw,42px);font-weight:400;line-height:1.6;white-space:nowrap}
+.heading .wedding-rings{display:block;width:124px;height:auto;object-fit:contain;justify-self:center;filter:drop-shadow(0 2px 2px #575e4c18)}
+@media(max-width:600px){.heading .names{grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);gap:8px}.heading .names .given-name{font-size:clamp(23px,7vw,29px)}.heading .wedding-rings{width:88px}}
+@media(max-height:620px) and (orientation:landscape){.heading .names{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:5px}.heading .names .given-name{font-size:clamp(19px,3vw,25px)}.heading .wedding-rings{width:64px}}

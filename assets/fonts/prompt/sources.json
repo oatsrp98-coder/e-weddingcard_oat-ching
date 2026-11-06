@@ -1,0 +1,54 @@
+{
+  "family": "Prompt",
+  "license": "OFL.txt",
+  "files": [
+    {
+      "file": "prompt-thai-400.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KdNodREEje60k.woff2",
+      "bytes": 6692,
+      "sha256": "80fa1143d208ec946c42b103c0e766041661d1128ca95795869ebd2c3ef161f3"
+    },
+    {
+      "file": "prompt-vietnamese-400.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2Kb9odREEje60k.woff2",
+      "bytes": 4012,
+      "sha256": "8ddfe1d341883b1c9528fb86b17d6ccff5160784be400bbdc1e196ba5c811abf"
+    },
+    {
+      "file": "prompt-latin-ext-400.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KbtodREEje60k.woff2",
+      "bytes": 9848,
+      "sha256": "5733a28dda73314d91922293256c27c22f1443049891616b55b788349ecc9753"
+    },
+    {
+      "file": "prompt-latin-400.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KYNodREEjew.woff2",
+      "bytes": 10948,
+      "sha256": "6d0bc99f47244cb7058adca34f02d673ea5532f8ae31d22601d8b379899ac0b2"
+    },
+    {
+      "file": "prompt-thai-500.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIfWMuUZctdhow.woff2",
+      "bytes": 6392,
+      "sha256": "cd02670a0ff635206a0719f5d5820e893a8bc42b51be4ac529cc45dbd6cabc7b"
+    },
+    {
+      "file": "prompt-vietnamese-500.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIZmMuUZctdhow.woff2",
+      "bytes": 3976,
+      "sha256": "23070ddb9eaf7c0dc7e9695abda84cd77266c6ed60caf16a1ecc95561a64b905"
+    },
+    {
+      "file": "prompt-latin-ext-500.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIZ2MuUZctdhow.woff2",
+      "bytes": 9624,
+      "sha256": "2165962a241d26a970f847d0845b3d8b378d3ef33f31921e7181f72ebc274099"
+    },
+    {
+      "file": "prompt-latin-500.woff2",
+      "url": "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIaWMuUZctdg.woff2",
+      "bytes": 10552,
+      "sha256": "7f38cd2182894621467a8569438d2d0ccf2f2aed4c33d678ab77aefbd8dbe4a0"
+    }
+  ]
+}
